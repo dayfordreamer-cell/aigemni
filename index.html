@@ -163,12 +163,10 @@
             const bookingForm = document.getElementById('bookingForm');
             const formStatus = document.getElementById('formStatus');
             
-            // !!! IMPORTANT: REPLACE THIS WITH YOUR DEPLOYED GOOGLE APPS SCRIPT WEB APP URL !!!
-            // Go to your Google Apps Script editor, click 'Deploy' -> 'Manage deployments',
-            // then copy the 'Web app URL' from your latest deployment.
+            // Your DEPLOYED GOOGLE APPS SCRIPT WEB APP URL has been placed here:
             const FORM_ACTION_URL = 'https://script.google.com/macros/s/AKfycbxHlmZRIsaa8kQP4aKqIdDIe1iDvnETepUf8XZ-vTYjZdmzu4F0QD2FSqUoCCPRlHi_tQ/exec'; 
 
-            if (bookingForm && FORM_ACTION_URL !== 'https://script.google.com/macros/s/AKfycbxHlmZRIsaa8kQP4aKqIdDIe1iDvnETepUf8XZ-vTYjZdmzu4F0QD2FSqUoCCPRlHi_tQ/exec') {
+            if (bookingForm && FORM_ACTION_URL) {
                 bookingForm.addEventListener('submit', function(e) {
                     e.preventDefault(); // Prevent default form submission
 
@@ -176,8 +174,6 @@
                     formStatus.style.color = '#8c6a99'; // Purple for pending
 
                     const formData = new FormData(bookingForm);
-                    // Google Apps Script expects parameter names corresponding to form 'name' attributes
-                    // We also normalize them (remove spaces) for easier processing in Apps Script
                     const payload = {};
                     for (const [key, value] of formData.entries()) {
                         payload[key.replace(/\s+/g, '')] = value; 
@@ -185,20 +181,17 @@
 
                     fetch(FORM_ACTION_URL, {
                         method: 'POST',
-                        mode: 'no-cors', // Essential for sending data to Apps Script from a different domain
+                        mode: 'no-cors', 
                         headers: {
-                            'Content-Type': 'application/x-www-form-urlencoded', // Standard form encoding
+                            'Content-Type': 'application/x-www-form-urlencoded', 
                         },
-                        body: new URLSearchParams(payload).toString() // URL-encode the payload for the request body
+                        body: new URLSearchParams(payload).toString() 
                     })
                     .then(() => {
-                        // In 'no-cors' mode, we can't inspect the response directly,
-                        // so we assume success if the fetch request itself didn't fail.
                         formStatus.textContent = 'Booking confirmed! We will contact you shortly.';
                         formStatus.style.color = 'green';
-                        bookingForm.reset(); // Clear the form fields
+                        bookingForm.reset(); 
                         
-                        // Optionally hide the status message after a few seconds
                         setTimeout(() => {
                             formStatus.textContent = '';
                         }, 5000);
@@ -209,8 +202,8 @@
                         formStatus.style.color = 'red';
                     });
                 });
-            } else if (bookingForm) { // If the form exists but URL isn't set
-                 formStatus.textContent = 'Warning: Booking system not fully configured. Please update FORM_ACTION_URL.';
+            } else if (bookingForm) { // Fallback if URL somehow ends up empty
+                 formStatus.textContent = 'Warning: Booking system URL is missing or incorrect.';
                  formStatus.style.color = 'orange';
             }
         });

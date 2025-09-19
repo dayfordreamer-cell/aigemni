@@ -99,7 +99,6 @@
                 <h4>Or Book Directly Here</h4>
                 <form id="bookingForm" class="booking-form">
                     <input type="text" id="customerName" name="Name" placeholder="Your Full Name" required>
-                    <!-- Removed: <input type="email" id="customerEmail" name="Email" placeholder="Your Email Address" required> -->
                     <input type="tel" id="customerPhone" name="Phone" placeholder="Your WhatsApp Number (e.g., 7061543143)" required>
 
                     <select id="serviceSelect" name="Service" required>
@@ -112,7 +111,22 @@
                     </select>
 
                     <input type="date" id="bookingDate" name="Preferred Date" required>
-                    <input type="time" id="bookingTime" name="Preferred Time" min="09:00" max="20:00" required>
+                    
+                    <select id="timeSlotSelect" name="Preferred Time" required>
+                        <option value="">Select a Time Slot (4 customers/hour)</option>
+                        <!-- Options will be dynamically added by JavaScript if needed, or static for simplicity -->
+                        <option value="09:00 AM - 10:00 AM">09:00 AM - 10:00 AM</option>
+                        <option value="10:00 AM - 11:00 AM">10:00 AM - 11:00 AM</option>
+                        <option value="11:00 AM - 12:00 PM">11:00 AM - 12:00 PM</option>
+                        <option value="12:00 PM - 01:00 PM">12:00 PM - 01:00 PM</option>
+                        <option value="01:00 PM - 02:00 PM">01:00 PM - 02:00 PM</option>
+                        <option value="02:00 PM - 03:00 PM">02:00 PM - 03:00 PM</option>
+                        <option value="03:00 PM - 04:00 PM">03:00 PM - 04:00 PM</option>
+                        <option value="04:00 PM - 05:00 PM">04:00 PM - 05:00 PM</option>
+                        <option value="05:00 PM - 06:00 PM">05:00 PM - 06:00 PM</option>
+                        <option value="06:00 PM - 07:00 PM">06:00 PM - 07:00 PM</option>
+                        <option value="07:00 PM - 08:00 PM">07:00 PM - 08:00 PM</option>
+                    </select>
                     
                     <textarea id="additionalNotes" name="Notes" placeholder="Any special requests or notes? (Optional)" rows="3"></textarea>
                     
@@ -164,7 +178,7 @@
             const formStatus = document.getElementById('formStatus');
             
             // Your DEPLOYED GOOGLE APPS SCRIPT WEB APP URL has been placed here:
-            const FORM_ACTION_URL = 'https://script.google.com/macros/s/AKfycbyZqPU4lbyslyqDv49pkglleheXTEuMmlyDmJx2tmOYid1he7s2p3tRoIsw7o6O0ojcpw/exec'; 
+            const FORM_ACTION_URL = 'https://script.google.com/macros/s/AKfycbxHlmZRIsaa8kQP4aKqIdDIe1iDvnETepUf8XZ-vTYjZdmzu4F0QD2FSqUoCCPRlHi_tQ/exec'; 
 
             if (bookingForm && FORM_ACTION_URL) {
                 bookingForm.addEventListener('submit', function(e) {

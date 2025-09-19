@@ -166,9 +166,9 @@
             // !!! IMPORTANT: REPLACE THIS WITH YOUR DEPLOYED GOOGLE APPS SCRIPT WEB APP URL !!!
             // Go to your Google Apps Script editor, click 'Deploy' -> 'Manage deployments',
             // then copy the 'Web app URL' from your latest deployment.
-            const FORM_ACTION_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE'; 
+            const FORM_ACTION_URL = 'https://script.google.com/macros/s/AKfycbxHlmZRIsaa8kQP4aKqIdDIe1iDvnETepUf8XZ-vTYjZdmzu4F0QD2FSqUoCCPRlHi_tQ/exec'; 
 
-            if (bookingForm && FORM_ACTION_URL !== 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE') {
+            if (bookingForm && FORM_ACTION_URL !== 'https://script.google.com/macros/s/AKfycbxHlmZRIsaa8kQP4aKqIdDIe1iDvnETepUf8XZ-vTYjZdmzu4F0QD2FSqUoCCPRlHi_tQ/exec') {
                 bookingForm.addEventListener('submit', function(e) {
                     e.preventDefault(); // Prevent default form submission
 

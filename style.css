@@ -275,6 +275,67 @@ a:hover {
     margin-bottom: 20px;
 }
 
+/* Booking Form Specific Styles */
+.booking-form-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    max-width: 600px;
+    margin: 50px auto; /* Center the form */
+    text-align: left; /* Align form labels/inputs to left */
+}
+
+.booking-form-container h4 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #5a3e4c;
+    font-size: 1.8em;
+}
+
+.booking-form input[type="text"],
+.booking-form input[type="email"],
+.booking-form input[type="tel"],
+.booking-form input[type="date"],
+.booking-form input[type="time"],
+.booking-form select,
+.booking-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: 'Lato', sans-serif;
+}
+
+.booking-form input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(40%) sepia(30%) saturate(600%) hue-rotate(220deg) brightness(90%) contrast(80%); /* Tints calendar icon */
+}
+
+.booking-form select {
+    appearance: none; /* Remove default arrow */
+    background: #fff url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%238c6a99%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-6.5%200-11.9%202.3-16.5%206.9-4.7%204.7-6.9%2010.1-6.9%2016.5%200%206.5%202.3%2011.9%206.9%2016.5l128.4%20128.4c4.7%204.7%2010.1%206.9%2016.5%206.9s11.9-2.3%2016.5-6.9L287%20102.4c4.7-4.7%206.9-10.1%206.9-16.5s-2.3-11.8-6.9-16.4z%22%2F%3E%3C%2Fsvg%3E') no-repeat right 12px center;
+    background-size: 12px;
+}
+
+.booking-form textarea {
+    resize: vertical; /* Allow vertical resizing only */
+}
+
+.booking-form button.btn-primary {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+#formStatus {
+    text-align: center;
+    color: green; /* Default success color */
+}
+
+
 /* Map Embed */
 .map-embed {
     width: 100%;
@@ -389,6 +450,14 @@ a:hover {
 
     .contact-method {
         padding: 20px;
+    }
+
+    .booking-form-container {
+        padding: 25px;
+        margin: 30px auto;
+    }
+    .booking-form-container h4 {
+        font-size: 1.5em;
     }
 
     .main-footer .container {

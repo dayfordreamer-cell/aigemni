@@ -3,157 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Modern Man's Salon - Precision Grooming</title>
+    <title>D'vine Parlour - Experience the Art of Beauty</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- Google Fonts for elegant typography (example: Playfair Display for headings, Lato for body) -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons (e.g., WhatsApp, location) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
+
+    <!-- Header Section -->
+    <header class="main-header">
         <div class="container">
-            <div class="logo">
-                <a href="#">The Modern Man's Salon</a>
-            </div>
-            <nav>
+            <h1 class="logo"><a href="#">D'vine Parlour</a></h1>
+            <nav class="main-nav">
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#" class="btn-primary">Book Now</a></li>
+                    <!-- <li><a href="#gallery">Gallery</a></li> -->
+                    <!-- <li><a href="#about">About Us</a></li> -->
+                    <li><a href="#contact">Book Now</a></li>
                 </ul>
             </nav>
+            <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
         </div>
     </header>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1>Precision Grooming for the Modern Man</h1>
-                <p>Experience the art of timeless style and superior service.</p>
-                <a href="#" class="btn-primary large">Book Your Transformation</a>
-            </div>
-        </section>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content container">
+            <h2>Experience the Art of Beauty</h2>
+            <p>Your journey to exquisite hair, skin, and makeup starts here.</p>
+            <a href="#contact" class="btn btn-primary">Book Your Transformation</a>
+        </div>
+    </section>
 
-        <section id="welcome" class="section-padding bg-light">
-            <div class="container text-center">
-                <h2>Welcome to The Modern Man's Salon</h2>
-                <p class="lead">Where tradition meets contemporary style. Our expert barbers are dedicated to crafting the perfect look for every gentleman.</p>
-                <div class="features">
-                    <div class="feature-item">
-                        <i class="fas fa-cut"></i>
-                        <h3>Expert Barbers</h3>
-                        <p>Highly skilled professionals ensuring precision in every cut and shave.</p>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-chair"></i>
-                        <h3>Luxurious Comfort</h3>
-                        <p>Relax in our stylish and sophisticated salon environment.</p>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-beer-mug-empty"></i>
-                        <h3>Premium Products</h3>
-                        <p>We use only the finest grooming products for a superior finish.</p>
-                    </div>
-                </div>
+    <!-- Services Section -->
+    <section id="services" class="services-section container">
+        <h3>Our Signature Services</h3>
+        <div class="service-grid">
+            <div class="service-item">
+                <img src="https://via.placeholder.com/300x200?text=Haircuts+%26+Styling" alt="Haircuts & Styling">
+                <h4>Haircuts & Styling</h4>
+                <p>Expert cuts, modern styling, and personalized looks tailored just for you.</p>
+                <span class="price">₹80</span>
             </div>
-        </section>
-
-        <section id="services" class="section-padding">
-            <div class="container">
-                <h2 class="text-center">Our Services</h2>
-                <div class="service-grid">
-                    <div class="service-item">
-                        <img src="https://via.placeholder.com/400x300/333/fff?text=Classic+Haircut" alt="Classic Haircut">
-                        <h3>Classic Haircuts</h3>
-                        <p>Timeless styles tailored to your unique look.</p>
-                        <span>From $35</span>
-                    </div>
-                    <div class="service-item">
-                        <img src="https://via.placeholder.com/400x300/333/fff?text=Hot+Towel+Shave" alt="Hot Towel Shave">
-                        <h3>Hot Towel Shave</h3>
-                        <p>The ultimate shaving experience with a smooth, clean finish.</p>
-                        <span>From $45</span>
-                    </div>
-                    <div class="service-item">
-                        <img src="https://via.placeholder.com/400x300/333/fff?text=Beard+Trim+%26+Shape" alt="Beard Trim & Shape">
-                        <h3>Beard Trim & Shape</h3>
-                        <p>Expert shaping and conditioning for a distinguished beard.</p>
-                        <span>From $25</span>
-                    </div>
-                    <div class="service-item">
-                        <img src="https://via.placeholder.com/400x300/333/fff?text=Facial+Treatment" alt="Facial Treatment">
-                        <h3>Men's Facial Treatment</h3>
-                        <p>Rejuvenate your skin with our refreshing facial treatments.</p>
-                        <span>From $60</span>
-                    </div>
-                </div>
-                <div class="text-center mt-4">
-                    <a href="#" class="btn-secondary">View All Services</a>
-                </div>
+            <div class="service-item">
+                <img src="https://via.placeholder.com/300x200?text=Hair+Coloring" alt="Hair Coloring & Highlights">
+                <h4>Hair Coloring & Highlights</h4>
+                <p>Vibrant colors, subtle highlights, and stunning transformations for your hair.</p>
+                <span class="price">₹200</span>
             </div>
-        </section>
-
-        <section id="testimonials" class="section-padding bg-light">
-            <div class="container">
-                <h2 class="text-center">What Our Clients Say</h2>
-                <div class="testimonial-carousel">
-                    <div class="testimonial-item">
-                        <p>"Best barbershop experience I've ever had. My haircut is always perfect!"</p>
-                        <h4>- John D.</h4>
-                    </div>
-                    <div class="testimonial-item">
-                        <p>"The hot towel shave is pure bliss. Highly recommend this place."</p>
-                        <h4>- Michael S.</h4>
-                    </div>
-                    <div class="testimonial-item">
-                        <p>"Professional, friendly, and a great atmosphere. My new go-to salon."</p>
-                        <h4>- David R.</h4>
-                    </div>
-                </div>
+            <div class="service-item">
+                <img src="https://via.placeholder.com/300x200?text=Beard+Transformation" alt="Beard Transformation">
+                <h4>Beard Transformation</h4>
+                <p>Sharpen your look with our professional beard trims and styling.</p>
+                <span class="price">₹50</span>
             </div>
-        </section>
-
-        <section id="about" class="section-padding">
-            <div class="container">
-                <div class="about-flex">
-                    <div class="about-image">
-                        <img src="https://via.placeholder.com/600x400/333/fff?text=Salon+Interior" alt="Salon Interior">
-                    </div>
-                    <div class="about-content">
-                        <h2>Our Story & Philosophy</h2>
-                        <p>Founded on a passion for classic barbering and modern style, The Modern Man's Salon is more than just a place for a haircut – it's an experience. We believe every man deserves to look and feel his best, and our team is dedicated to providing personalized service in a refined, welcoming environment.</p>
-                        <p>We combine time-honored techniques with contemporary trends to deliver precision grooming that suits your individual lifestyle and preferences.</p>
-                        <a href="#" class="btn-secondary">Meet Our Team</a>
-                    </div>
-                </div>
+            <div class="service-item">
+                <img src="https://via.placeholder.com/300x200?text=Facials+%26+Skincare" alt="Facials & Skincare">
+                <h4>Facials & Skincare</h4>
+                <p>Rejuvenate your skin with our luxurious facials and personalized skincare treatments.</p>
+                <span class="price">₹150</span>
             </div>
-        </section>
-
-        <section id="contact" class="section-padding bg-dark text-white">
-            <div class="container text-center">
-                <h2>Visit Us Today</h2>
-                <p>Ready for a superior grooming experience? Book your appointment or stop by!</p>
-                <p><i class="fas fa-map-marker-alt"></i> 123 Main Street, Cityville, ST 12345</p>
-                <p><i class="fas fa-phone"></i> (555) 123-4567</p>
-                <p><i class="fas fa-envelope"></i> info@modernmanssalon.com</p>
-                <div class="social-links mt-3">
-                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                </div>
-                <a href="#" class="btn-primary large mt-4">Book Your Appointment Now</a>
+            <div class="service-item">
+                <img src="https://via.placeholder.com/300x200?text=Makeup+%26+Bridal" alt="Makeup & Bridal Packages">
+                <h4>Makeup & Bridal Packages</h4>
+                <p>Flawless makeup for any occasion, and unforgettable bridal transformations.</p>
+                <span class="price">₹1000</span>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <footer>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
         <div class="container">
-            <p>&copy; 2023 The Modern Man's Salon. All rights reserved.</p>
+            <h3>Book Your Appointment</h3>
+            <div class="contact-info-grid">
+                <div class="contact-method">
+                    <i class="fab fa-whatsapp"></i>
+                    <h4>WhatsApp Us</h4>
+                    <p>For quick bookings and inquiries.</p>
+                    <a href="https://wa.me/7061543143?text=Hi%2C%20I%27d%20like%20to%20book%20an%20appointment%20at%20D%27vine%20Parlour." target="_blank" class="btn btn-secondary">Chat Now</a>
+                </div>
+                <div class="contact-method">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Our Location</h4>
+                    <p>Singhrawan More, Chouparan, Hazaribagh, Jh 825406</p>
+                    <a href="https://www.google.com/maps/search/Singhrawan+More,+Chouparan,+Hazaribagh,+Jh+825406" target="_blank" class="btn btn-secondary">Get Directions</a>
+                </div>
+            </div>
+            <!-- Optional: A simple contact form could go here, but for now, WhatsApp is primary -->
+            <!--
+            <form class="contact-form">
+                <h4>Send Us a Message</h4>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5"></textarea>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+            -->
+        </div>
+        <div class="map-embed">
+            <!-- Replace with your actual Google Maps embed code -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14620.725916053702!2d84.97022238499279!3d24.3804899539308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f50f7f7f7f7f7f%3A0x8f0f0f0f0f0f0f0f!2sChouparan%2C%20Jharkhand%20825406!5e0!3m2!1sen!2sin!4v1678901234567!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2023 D'vine Parlour. All rights reserved.</p>
+            <div class="social-links">
+                <!-- Add your social media links here -->
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
     </footer>
+
+    <!-- Simple JavaScript for mobile menu toggle (optional) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const mainNav = document.querySelector('.main-nav ul');
+
+            if (menuToggle && mainNav) {
+                menuToggle.addEventListener('click', function() {
+                    mainNav.classList.toggle('active');
+                });
+
+                // Close menu when a nav link is clicked (for smoother mobile UX)
+                document.querySelectorAll('.main-nav a').forEach(item => {
+                    item.addEventListener('click', () => {
+                        mainNav.classList.remove('active');
+                    });
+                });
+            }
+        });
+    </script>
+
 </body>
 </html>
